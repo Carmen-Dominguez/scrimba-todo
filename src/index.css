@@ -12,11 +12,19 @@ code {
     monospace;
 }
 
-div {
+.container {
   margin: 20px;
   padding: 10px;
 }
 
 h1 {
   font-family: fantasy;
+}
+
+main {
+  padding: 0 10px;
+}
+
+footer {
+  text-align: right;
 }
