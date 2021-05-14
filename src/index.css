@@ -18,11 +18,20 @@ code {
 }
 
 h1 {
-  font-family: fantasy;
+  font-family: inherit;
+  font-size: 24px;
 }
 
 main {
   padding: 0 10px;
+}
+
+form {
+  padding: 0 25px;
+}
+
+label {
+  margin-left: 7px;
 }
 
 footer {
