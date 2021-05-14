@@ -1,21 +1,17 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 
 function Todo() {
     return (
         <div>
             <h3>My Todo List: </h3>
             <form>
-                <input type="checkbox" id="1" name="1" />
-                <label htmlFor="1">Todo 1: </label>
-                <br />
-                <input type="checkbox" id="2" name="2" />
-                <label htmlFor="2">Todo 2: </label>
-                <br />
-                <input type="checkbox" id="3" name="3" />
-                <label htmlFor="3">Todo 3: </label>
+                <TodoItem id={"1"} task={"Todo 1 "} />
+                <TodoItem id={"2"} task={"Todo 2 "} />
+                <TodoItem id={"3"} task={"Todo 3 "} />
             </form>
         </div>
     );
 }
 
-export default Todo
+export default Todo;
