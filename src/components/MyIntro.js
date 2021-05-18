@@ -1,40 +1,46 @@
 import React from "react";
 
-function MyIntro() {
-    const name = "Cassie";
+class MyIntro extends React.Component {
+    name = "Cassie";
 
-    const date = new Date();
-    const hours = date.getHours();
-    let timeOfDay;
-    const styles= {
+    date = new Date();
+    hours = this.date.getHours();
+    timeOfDay = 0;
+    styles= {
         color: "inherit"
     };
     
-    if (hours < 12) {
-        timeOfDay = "morning";
-        styles.color = "#d7ebed";
-    } else if (hours >= 12 && hours <= 17) {
-        timeOfDay = "afternoon";
-        styles.color = "#b3dbe0";
-    } else {
-        timeOfDay = "evening";
-        styles.color = "#141852";
+    getStyle() {
+        if (this.hours < 12) {
+            this.timeOfDay = "morning";
+            this.styles.color = "#d7ebed";
+        } else if (this.hours >= 12 && this.hours <= 17) {
+            this.timeOfDay = "afternoon";
+            this.styles.color = "#b3dbe0";
+        } else {
+            this.timeOfDay = "evening";
+            this.styles.color = "#141852";
+        }
     }
+    
+    render() {
+        this.getStyle();
 
-    return (
-        <main>
-            <h3 style={styles}>Good {timeOfDay}, I'm {name}</h3>
-            <p>I'm not a fan of my name much, so I'm going with {name} for now. One day I'd like to travel to one
-            of these places:
-        </p>
-            <ul>
-                <li>Greece</li>
-                <li>Tibet</li>
-                <li>Romania</li>
-            </ul>
-
-        </main>
-    )
+        return (
+            <main>
+                <h3 style={this.styles}>Good {this.timeOfDay}, I'm {this.name}</h3>
+                <p>I'm not a fan of my name much, so I'm going with {this.name} for now. One day I'd like to travel to one
+                of these places:
+            </p>
+                <ul>
+                    <li>Greece</li>
+                    <li>Tibet</li>
+                    <li>Romania</li>
+                </ul>
+    
+            </main>
+        )
+    }
 }
 
 export default MyIntro
