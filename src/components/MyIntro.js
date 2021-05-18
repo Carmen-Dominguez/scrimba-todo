@@ -1,14 +1,19 @@
 import React from "react";
 
 class MyIntro extends React.Component {
-    name = "Cassie";
-
+    name = "Default";
     date = new Date();
     hours = this.date.getHours();
     timeOfDay = 0;
     styles= {
         color: "inherit"
     };
+
+    constructor(props) {
+        super();
+        this.name = props.name;
+    }
+
     
     getStyle() {
         if (this.hours < 12) {

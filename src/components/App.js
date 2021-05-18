@@ -4,15 +4,19 @@ import MyIntro from "./MyIntro";
 import Todo from "./Todo";
 import Footer from "./Footer";
 
-function App() {
-    return (
-        <div className="container">
-            <Header />
-            <MyIntro />
-            <Todo />
-            <Footer />
-        </div>
-    );
+class App extends React.Component {
+    name = "Cassie";
+
+    render() {
+        return (
+            <div className="container">
+                <Header />
+                <MyIntro name={this.name}/>
+                <Todo />
+                <Footer name={this.name}/>
+            </div>
+        );
+    }
 }
 
 export default App;
