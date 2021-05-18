@@ -1,15 +1,16 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import todos from "../data/todosData";
 
-const myTodos = [
-    { id: "1", task: "Todo 1"},
-    { id: "2", task: "Todo 2"},
-    { id: "3", task: "Todo 3"},
-    { id: "4", task: "Todo 4"},
-];
+const myTodos = todos;
 
 function Todo() {
-    const todos = myTodos.map(item => <TodoItem id={item.id} task={item.task} />);
+    const todos = myTodos.map(item => <TodoItem
+        key={item.id}
+        id={item.id}
+        task={item.task}
+        completed={item.completed} 
+    />);
 
     return (
         <div>

@@ -34,7 +34,9 @@ form {
 }
 
 .item {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid thin lightblue;
+  margin-bottom: 30px;
 }
 
 label {
